@@ -88,10 +88,10 @@ __注：如果不需要搭建es6环境，仅仅需要一份普通的gulp配置�
 
 以上配置，都参考了如下文章，请自行进行查阅，gulpfile.js也有详细的配置讲解
 
-## 使用gulp 进行ES6开发：参考地址
+## 使用gulp 进行ES6开发
 https://segmentfault.com/a/1190000004394726
 
-## gulp 热更新：参考地址
+## gulp 热更新
 https://blog.csdn.net/beverley__/article/details/55213235
 
 ## 使用Gulp和Browserify创建多个绑定文件
