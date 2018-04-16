@@ -1,5 +1,5 @@
-#使用gulp进行es6+版本号自动添加+热更新开发
-##使用
+# 使用gulp进行es6+版本号自动添加+热更新开发
+## 使用
 
 
 1、进入目录 打开命令  输入 npm i 进行安装（如果装了yarn，直接yarn,效率会更高）
@@ -18,7 +18,7 @@
 （注：如果不需要搭建es6环境，仅仅需要一份普通的gulp配置环境的话，只需要在gulpfile.js配置文件中的第270行注释掉即可）
 
 
-##项目目录
+## 项目目录
 
 │  gulpfile.js //gulp 配置文件
 │  package.json //插件包配置文件
@@ -84,19 +84,19 @@
 
 以上配置，都参考了如下文章，请自行进行查阅，gulpfile.js也有详细的配置讲解
 
-##使用gulp 进行ES6开发：参考地址
+## 使用gulp 进行ES6开发：参考地址
 https://segmentfault.com/a/1190000004394726
 
-##gulp 热更新：参考地址
+## gulp 热更新：参考地址
 https://blog.csdn.net/beverley__/article/details/55213235
 
-##使用Gulp和Browserify创建多个绑定文件
+## 使用Gulp和Browserify创建多个绑定文件
 https://www.cnblogs.com/darrenji/p/5492293.html
 
 
-##版本号插件修改方法
+## 版本号插件修改方法
 
-###参考地址 http://www.jb51.net/article/100652.htm（gulp自动修改版本号）、https://www.cnblogs.com/tnnyang/p/6023475.html
+### 参考地址 http://www.jb51.net/article/100652.htm（gulp自动修改版本号）、https://www.cnblogs.com/tnnyang/p/6023475.html
 
 因为下载下来的包，版本可能有所不一样的，所以修改的地方也有可能不同，但是你可以抓住关键的词进行修改，我的这个版本修改如下。
 
