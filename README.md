@@ -20,15 +20,12 @@
 
 ## 项目目录
 
-│  gulpfile.js //gulp 配置文件
-│  package.json //插件包配置文件
-│ 
-│
-│  
-├─dist //用命令gulp build打包后生成的文件
-│  ├─css
-│  │      base.css
-│  │      index.css
+> gulpfile.js //gulp 配置文件
+> package.json //插件包配置文件
+> dist //用命令gulp build打包后生成的文件
+>> css
+>>>base.css
+index.css
 │  │      
 │  ├─js
 │  │  ├─config
