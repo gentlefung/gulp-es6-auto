@@ -99,12 +99,11 @@ https://www.cnblogs.com/darrenji/p/5492293.html
 
 
 ## 版本号插件修改方法
-
-### 参考地址 http://www.jb51.net/article/100652.htm（gulp自动修改版本号）、https://www.cnblogs.com/tnnyang/p/6023475.html
+ http://www.jb51.net/article/100652.htm（gulp自动修改版本号）、https://www.cnblogs.com/tnnyang/p/6023475.html
 
 因为下载下来的包，版本可能有所不一样的，所以修改的地方也有可能不同，但是你可以抓住关键的词进行修改，我的这个版本修改如下。
 
-#### 打开node_modules\gulp-rev\index.js
+###  打开node_modules\gulp-rev\index.js
 
 
 第135行 manifest[originalFile] = revisionedFile;
@@ -114,7 +113,7 @@ https://www.cnblogs.com/darrenji/p/5492293.html
 
 
 
-####打开nodemodules\gulp-rev\nodemodules\rev-path\index.js//如果找不到这个目录就打开nodemodules\rev-path\index.js
+### 打开nodemodules\gulp-rev\nodemodules\rev-path\index.js//如果找不到这个目录就打开nodemodules\rev-path\index.js
 
 
 第9行 return modifyFilename(pth, (filename, ext) => `${filename}-${hash}${ext}`);
@@ -126,7 +125,7 @@ https://www.cnblogs.com/darrenji/p/5492293.html
 
 
 
-####打开node_modules\gulp-rev-collector\index.js
+### 打开node_modules\gulp-rev-collector\index.js
 
 
 40 行 var cleanReplacement =  path.basename(json[key]).replace(new RegExp(revSuffix )
@@ -144,7 +143,7 @@ https://www.cnblogs.com/darrenji/p/5492293.html
 
 
 
-####打开node_modules\gulp-assets-rev\index.js
+### 打开node_modules\gulp-assets-rev\index.js
 
 
 78行 var verStr = (options.verConnecter || "-") + md5;
