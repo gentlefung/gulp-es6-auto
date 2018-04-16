@@ -52,13 +52,13 @@ __注：如果不需要搭建es6环境，仅仅需要一份普通的gulp配置�
 ├─node_modules  //npm i  下载下来的插件包
 │  
 │          
-├─rev  //生成的版本hash文件
+├─rev  // 生成的版本hash文件
 │  ├─css
-│  │      rev-manifest.json
-│  │      
+│  │      rev-manifest.json  //css的hash文件
+│  │     
 │  └─js
-│          rev-manifest.json
-│          
+│          rev-manifest.json //js的hash文件
+│
 └─src // 开发环境下的文件目录，请在这里进行开发
     ├─css   //样式
     │      base.less
@@ -103,7 +103,7 @@ https://www.cnblogs.com/darrenji/p/5492293.html
 
 因为下载下来的包，版本可能有所不一样的，所以修改的地方也有可能不同，但是你可以抓住关键的词进行修改，我的这个版本修改如下。
 
-###  打开node_modules\gulp-rev\index.js
+###  1、打开node_modules\gulp-rev\index.js
 
 
 第135行 manifest[originalFile] = revisionedFile;
@@ -113,7 +113,7 @@ https://www.cnblogs.com/darrenji/p/5492293.html
 
 
 
-### 打开nodemodules\gulp-rev\nodemodules\rev-path\index.js//如果找不到这个目录就打开nodemodules\rev-path\index.js
+### 2、打开nodemodules\gulp-rev\nodemodules\rev-path\index.js//如果找不到这个目录就打开nodemodules\rev-path\index.js
 
 
 第9行 return modifyFilename(pth, (filename, ext) => `${filename}-${hash}${ext}`);
@@ -125,7 +125,7 @@ https://www.cnblogs.com/darrenji/p/5492293.html
 
 
 
-### 打开node_modules\gulp-rev-collector\index.js
+### 3、打开node_modules\gulp-rev-collector\index.js
 
 
 40 行 var cleanReplacement =  path.basename(json[key]).replace(new RegExp(revSuffix )
@@ -143,7 +143,7 @@ https://www.cnblogs.com/darrenji/p/5492293.html
 
 
 
-### 打开node_modules\gulp-assets-rev\index.js
+### 4、打开node_modules\gulp-assets-rev\index.js
 
 
 78行 var verStr = (options.verConnecter || "-") + md5;
