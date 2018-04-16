@@ -1,5 +1,6 @@
 # 使用gulp进行es6+版本号自动添加+热更新开发
-## 使用
+
+## 项目运行
 
 
 1、进入目录 打开命令  输入 npm i 进行安装（如果装了yarn，直接yarn,效率会更高）
@@ -15,17 +16,21 @@
 4、输入命令 gulp build 进行打包
 
 
-（注：如果不需要搭建es6环境，仅仅需要一份普通的gulp配置环境的话，只需要在gulpfile.js配置文件中的第270行注释掉即可）
+__注：如果不需要搭建es6环境，仅仅需要一份普通的gulp配置环境的话，只需要在gulpfile.js配置文件中的第270行注释掉即可
 
 
 ## 项目目录
-
-> gulpfile.js //gulp 配置文件
-> package.json //插件包配置文件
-> dist //用命令gulp build打包后生成的文件
->> css
->>>base.css
-index.css
+```
+.
+│  gulpfile.js //gulp 配置文件
+│  package.json //插件包配置文件
+│ 
+│
+│  
+├─dist //用命令gulp build打包后生成的文件
+│  ├─css
+│  │      base.css
+│  │      index.css
 │  │      
 │  ├─js
 │  │  ├─config
@@ -77,6 +82,8 @@ index.css
     └─view  //模板存放的地址
             index.html
             test.html
+.
+```
 
 
 以上配置，都参考了如下文章，请自行进行查阅，gulpfile.js也有详细的配置讲解
@@ -97,7 +104,7 @@ https://www.cnblogs.com/darrenji/p/5492293.html
 
 因为下载下来的包，版本可能有所不一样的，所以修改的地方也有可能不同，但是你可以抓住关键的词进行修改，我的这个版本修改如下。
 
-打开node_modules\gulp-rev\index.js
+#### 打开node_modules\gulp-rev\index.js
 
 
 第135行 manifest[originalFile] = revisionedFile;
@@ -107,10 +114,7 @@ https://www.cnblogs.com/darrenji/p/5492293.html
 
 
 
-
-
-
-打开nodemodules\gulp-rev\nodemodules\rev-path\index.js//如果找不到这个目录就打开nodemodules\rev-path\index.js
+####打开nodemodules\gulp-rev\nodemodules\rev-path\index.js//如果找不到这个目录就打开nodemodules\rev-path\index.js
 
 
 第9行 return modifyFilename(pth, (filename, ext) => `${filename}-${hash}${ext}`);
@@ -122,9 +126,7 @@ https://www.cnblogs.com/darrenji/p/5492293.html
 
 
 
-
-
-打开node_modules\gulp-rev-collector\index.js
+####打开node_modules\gulp-rev-collector\index.js
 
 
 40 行 var cleanReplacement =  path.basename(json[key]).replace(new RegExp(revSuffix )
@@ -142,9 +144,7 @@ https://www.cnblogs.com/darrenji/p/5492293.html
 
 
 
-
-
-打开node_modules\gulp-assets-rev\index.js
+####打开node_modules\gulp-assets-rev\index.js
 
 
 78行 var verStr = (options.verConnecter || "-") + md5;
